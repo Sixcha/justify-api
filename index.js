@@ -2,15 +2,15 @@ const req = require('express/lib/request');
 
 const express = require('express');
 const app = express();
-const PORT = 8080;
+const port = process.env.PORT ||  5000;
 
 app.listen(
-    PORT,()=> console.log(`http://localhost:${PORT}`)
+    port,()=> console.log(`http://localhost:${port}`)
 )
 
 app.use( express.json() )
 
-app.get('/text', (req, res) =>
+app.get('/api/justify', (req, res) =>
 {
     res.status(200).send({
         Duck: 'Quack',
