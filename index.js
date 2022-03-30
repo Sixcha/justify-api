@@ -14,6 +14,6 @@ app.get('/text', (req, res) =>
 {
     res.status(200).send({
         Duck: 'Quack',
-        What: 'Quackkk'
+        Cat: 'Meow'
     })
 })
